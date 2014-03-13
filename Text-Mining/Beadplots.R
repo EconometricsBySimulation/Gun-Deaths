@@ -1,3 +1,17 @@
+# Text Mining Gun Deaths
+
+In this post I will explore public data being collected by <a href="http://www.slate.com/articles/news_and_politics/crime/2012/12/gun_death_tally_every_american_gun_death_since_newtown_sandy_hook_shooting.html">Slate</a>.
+
+This data began collection as a response to the shooting at Sandy Hook Elementary in December of 2012 in an attempt to create a database of all of the deaths as a result of guns in the US.  Since its creation, the database has expanded to a list of over 12,000 deaths in a little over a year.
+
+In this post I will explore a little of that database as well scrape the web for additional data from the articles listed on the database.
+
+# Let's load the raw data:
+gun.deaths <- read.csv("http://slate-interactives-prod.elasticbeanstalk.com/gun-deaths/getCSV.php")
+
+tail(gun.deaths)
+summary(gun.deaths)
+
 # We can see that the vast majority of gun deaths are among men with 10,153 
 # and only 1,850 among women.  The mean age is 33.34 while the median age is
 # a little lower are 30.  Interestingly the maximum age is 107. What 
